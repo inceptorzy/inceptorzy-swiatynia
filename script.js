@@ -133,13 +133,3 @@ Chcesz się wyleczyć? Musisz przestać być najeźdźcą. Musisz zawrzeć pokó
         }
     });
     
-    // 4. OBSŁUGA FORMULARZA (prosta)
-    const form = document.getElementById('wezwanie-form');
-    if (form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('WEZWANIE ZOSTAŁO ODEBRANE.');
-            form.reset();
-        });
-    }
-};
