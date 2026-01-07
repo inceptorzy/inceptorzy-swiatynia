@@ -1,4 +1,4 @@
-window.onload = function() {
+document.addEventListener('DOMContentLoaded', () => {
 
     const manifesty = [
         {
@@ -70,25 +70,20 @@ Bo tylko wtedy, gdy ona umrze, ty wreszcie odzyskasz swój tron.`
             sygnet.appendChild(tytul);
 
             sygnet.addEventListener('click', () => {
-                if (modalImage) modalImage.src = manifest.obraz;
-                if (modalTitle) modalTitle.textContent = manifest.tytul;
-                if (modalText) modalText.innerText = manifest.tresc;
+                modalImage.src = manifest.obraz;
+                modalTitle.textContent = manifest.tytul;
+                modalText.innerText = manifest.tresc;
                 
-                if (modal) {
-                    modal.classList.add('modal-visible');
-                }
-            });
+                modal.classList.add('modal-visible');
+});
             
             galeria.appendChild(sygnet);
         });
     }
 
     function zamknijModal() {
-        if (modal) {
-            modal.classList.remove('modal-visible');
-        }
+        modal.classList.remove('modal-visible');
     }
-
 
     if (closeModal) closeModal.addEventListener('click', zamknijModal);
     
@@ -105,3 +100,4 @@ Bo tylko wtedy, gdy ona umrze, ty wreszcie odzyskasz swój tron.`
             zamknijModal();
         }
     });
+});
