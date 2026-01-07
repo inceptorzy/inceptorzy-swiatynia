@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INCEPTORZY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <audio id="background-drone" loop>
+        <source src="assets/audio/dron.mp3" type="audio/mpeg">
+    </audio>
+
+ 
+    <section id="przedsionek">
+        <div id="logo-container">
+            <img src="assets/images/logo.png" alt="Sztandar Inceptorów">
+        </div>
+        <div id="kredo-container">
+            <p>TWOJE CIAŁO TO POLE BITWY. WALCZYMY RAZEM.</p>
+            <br>
+            <p>DEKONSTRUUJEMY KŁAMSTWA. KUJEMY BROŃ. TWORZYMY LEGION.</p>
+            <br>
+            <p>BRAMA ZOSTANIE OTWARTA.</p>
+        </div>
+        <div id="scroll-arrow">↓</div>
+    </section>
+
+    <section id="zbrojownia">
+        <h1>ARSENAŁ</h1>
+        <div class="galeria-sygnetow">
+            <!-- JS WYPEŁNI TĘ PRZESTRZEŃ -->
+        </div>
+    </section>
+    
+    <section id="oltarz">
+        <div class="oltarz-text">
+            <p>SŁOWA SĄ WIATREM.</p>
+            <p>WIEDZA JEST MAPĄ.</p>
+            <p>LICZY SIĘ TYLKO DZIAŁANIE.</p>
+            <br>
+            <p>PRZESTAŃ CZYTAĆ. ZACZNIJ BUDOWAĆ.</p>
+            <br>
+            <h2>WEZWIJ ARCHITEKTA.</h2>
+        </div>
+<form id="wezwanie-form" action="https://formsubmit.co/inceptorzy@proton.me" method="POST">
+    <input type="text" name="imie" placeholder="IMIĘ" required>
+    <input type="email" name="email" placeholder="EMAIL" required>
+    <button type="submit">[ ROZPOCZNIJ INCEPCJĘ ]</button>
+</form>
+    </section>
+
+    <footer id="krypta">
+        <p>© 2026 INCEPTORZY. WSZYSTKIE PRAWA ZASTRZEŻONE.</p>
+    </footer>
+    
+    <div id="kodeks-modal" class="modal-hidden">
+        <div id="kodeks-content">
+            <img id="kodeks-image" src="">
+            <div id="kodeks-text-container">
+                <h2 id="kodeks-title"></h2>
+                <p id="kodeks-text"></p>
+            </div>
+        </div>
+        <div id="kodeks-close">X</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
