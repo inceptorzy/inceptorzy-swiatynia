@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INCEPTORZY</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <section id="przedsionek">
-        <!-- Ta sekcja pozostaje pusta; JS ją wypełni, by zapewnić kolejność ładowania -->
+        <div id="logo-container">
+            <img src="/assets/images/logo.png" alt="Sztandar Inceptorów">
+        </div>
+        <div id="kredo-container">
+            <p>TWOJE CIAŁO TO POLE BITWY. WALCZYMY RAZEM.</p>
+            <br>
+            <p>DEKONSTRUUJEMY KŁAMSTWA. KUJEMY BROŃ. TWORZYMY LEGION.</p>
+            <br>
+            <p>BRAMA ZOSTANIE OTWARTA.</p>
+        </div>
+        <div id="scroll-arrow">↓</div>
     </section>
 
     <section id="zbrojownia">
@@ -20,6 +30,7 @@
     </section>
     
     <section id="oltarz">
+        <!-- ... (Sekcja Ołtarza pozostaje bez zmian) ... -->
         <div class="oltarz-text">
             <p>SŁOWA SĄ WIATREM.</p>
             <p>WIEDZA JEST MAPĄ.</p>
@@ -42,9 +53,9 @@
         <p>© 2026 INCEPTORZY. WSZYSTKIE PRAWA ZASTRZEŻONE.</p>
     </footer>
     
-    <div id="kodeks-modal">
+    <div id="kodeks-modal" class="modal-hidden">
         <div id="kodeks-content">
-            <img id="kodeks-image" src="assets/images/logo.png" alt="Sztandar Inceptorów">
+            <img id="kodeks-image" src=""> <!-- SRC MUSI BYĆ PUSTE -->
             <div id="kodeks-text-container">
                 <h2 id="kodeks-title"></h2>
                 <p id="kodeks-text"></p>
