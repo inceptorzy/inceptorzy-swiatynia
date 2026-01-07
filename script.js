@@ -71,18 +71,13 @@ Cukrzyca to nie jest choroba. To jest stan oblężenia. A lekarstwo, które ci d
 Chcesz się wyleczyć? Musisz przestać być najeźdźcą. Musisz zawrzeć pokój z własnym ciałem. A pierwszy artykuł tego traktatu brzmi: koniec bombardowania cukrem.`
         }
     ];
-
-    // --- SELEKCJA ELEMENTÓW ---
-    const galeria = document.querySelector('.galeria-sygnetow');
+const galeria = document.querySelector('.galeria-sygnetow');
     const modal = document.getElementById('kodeks-modal');
     const modalImage = document.getElementById('kodeks-image');
     const modalTitle = document.getElementById('kodeks-title');
     const modalText = document.getElementById('kodeks-text');
     const closeModal = document.getElementById('kodeks-close');
 
-    // --- LOGIKA PROGRAMU ---
-
-    // 1. WYPEŁNIJ ZBROJOWNIĘ
     if (galeria) {
         galeria.innerHTML = '';
         manifesty.forEach(manifest => {
@@ -95,28 +90,21 @@ Chcesz się wyleczyć? Musisz przestać być najeźdźcą. Musisz zawrzeć pokó
             sygnet.appendChild(tytul);
 
             sygnet.addEventListener('click', () => {
-                if (modalImage) modalImage.src = manifest.obraz;
-                if (modalTitle) modalTitle.textContent = manifest.tytul;
-                if (modalText) modalText.innerText = manifest.tresc;
+                modalImage.src = manifest.obraz;
+                modalTitle.textContent = manifest.tytul;
+                modalText.innerText = manifest.tresc;
                 
-                if (modal) {
-                    modal.classList.remove('modal-hidden');
-                    modal.classList.add('modal-visible');
-                }
-            });
+                modal.classList.add('modal-visible');
+});
             
             galeria.appendChild(sygnet);
         });
     }
 
-    // 2. FUNKCJA ZAMYKANIA MODALA
     function zamknijModal() {
-        if (modal) {
-            modal.classList.remove('modal-visible');
-        }
+        modal.classList.remove('modal-visible');
     }
 
-    // 3. LISTENERY DLA ZAMYKANIA MODALA
     if (closeModal) closeModal.addEventListener('click', zamknijModal);
     
     if (modal) {
@@ -132,4 +120,4 @@ Chcesz się wyleczyć? Musisz przestać być najeźdźcą. Musisz zawrzeć pokó
             zamknijModal();
         }
     });
-    
+});
