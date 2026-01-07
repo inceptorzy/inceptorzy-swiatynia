@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // 1. Buduj Przedsionek
         przedsionek.innerHTML = `
             <div id="logo-container">
-                <img src="https://i.imgur.com/your_logo_hash.png" alt="Sztandar Inceptorów">
+                <assets/images/logo.png" alt="Sztandar Inceptorów">
             </div>
             <div id="kredo-container">
                 <p>TWOJE CIAŁO TO POLE BITWY. WALCZYMY RAZEM.</p>
