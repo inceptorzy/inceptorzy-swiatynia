@@ -2,6 +2,25 @@
 body { background-color: #000; color: #fff; font-family: 'Cinzel', serif; text-align: center; }
 section { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 100px 20px; border-bottom: 1px solid #222; }
 
+html {
+    scroll-behavior: smooth;
+}
+
+/* Stylizacja Paska Przewijania dla Chrome/Safari/Edge */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #000;
+}
+::-webkit-scrollbar-thumb {
+    background: #222;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 /* PRZEDSIONEK */
 #przedsionek { justify-content: center; }
 #logo-container img { max-width: 200px; margin-bottom: 40px; animation: levitate 8s ease-in-out infinite; }
@@ -16,16 +35,48 @@ section { min-height: 100vh; display: flex; flex-direction: column; justify-cont
 .sygnet { aspect-ratio: 1 / 1; background-size: cover; background-position: center; position: relative; cursor: pointer; overflow: hidden; border: 1px solid #222; }
 .sygnet::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 50%); opacity: 0; transition: opacity 0.3s ease; }
 .sygnet:hover::after { opacity: 1; }
-.sygnet h3 { position: absolute; bottom: 20px; left: 20px; right: 20px; font-size: 1.2em; transform: translateY(150%); transition: transform 0.3s ease; text-shadow: 0px 0px 5px #000; }
+.sygnet h3 { position: absolute; bottom: 20px; left: 20px; right: 20px; font-size: 1.2em; transform: translateY(150%); transition: transform 0.3s ease; text-shadow: 0px 0px 8px rgba(0, 0, 0, 1);}
 .sygnet:hover h3 { transform: translateY(0); }
 
 /* OŁTARZ */
 .oltarz-text p { font-size: 1.2em; line-height: 1.8; }
 .oltarz-text h2 { font-size: 2.5em; margin: 40px 0; }
-#wezwanie-form input { background: transparent; border: 1px solid #555; color: #fff; font-family: 'Cinzel', serif; font-size: 1em; padding: 15px; margin: 5px; width: 280px; text-align: center; transition: border-color 0.3s; }
-#wezwanie-form input:focus { outline: none; border-color: #D4AF37; }
-#wezwanie-form button { background: transparent; border: 2px solid #D4AF37; color: #D4AF37; font-family: 'Cinzel', serif; font-size: 1.2em; font-weight: 700; padding: 13px 30px; cursor: pointer; margin-top: 20px; transition: all 0.3s; }
-#wezwanie-form button:hover { background-color: #D4AF37; color: #000; transform: scale(1.05); }
+#wezwanie-form input {
+    background: transparent;
+    border: 1px solid #555;
+    color: #FFFFFF;
+    font-family: 'Cinzel', serif;
+    font-size: 1em;
+    padding: 15px;
+    margin: 5px;
+    width: 280px;
+    text-align: center;
+    transition: border-color 0.3s;
+}
+
+#wezwanie-form input:focus {
+    outline: none;
+    border-color: #D4AF37;
+}
+
+#wezwanie-form button {
+    background: transparent;
+    border: 2px solid #D4AF37;
+    color: #D4AF37;
+    font-family: 'Cinzel', serif;
+    font-size: 1.2em;
+    font-weight: 700;
+    padding: 13px 30px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s;
+}
+
+#wezwanie-form button:hover {
+    background-color: #D4AF37;
+    color: #000000;
+    transform: scale(1.05);
+}
 
 /* STOPKA */
 footer { padding: 40px; font-size: 0.8em; color: #444; }
