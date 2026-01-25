@@ -25,9 +25,18 @@ Musisz go zagłodzić.
 Musisz przetrwać jego agonalne spazmy, gdy będzie umierał w TWOIM wnętrzu.\n\nBo tylko wtedy, gdy on zginie, TY wreszcie odzyskasz SWOJĄ świątynię.`
         },
         {
-            obraz: 'assets/images/dopaminowa-smycz.jpg', // Zaktualizowana nazwa pliku
-            tytul: 'Twoja wola jest na smyczy.',
-            tresc: `Czujesz to. Ten swędzący kciuk. Ten nagły głód, żeby sprawdzić. Jeszcze jeden scroll. Jeszcze jedna nagroda. Myślisz, że to twój wybór.\n\nA oni się śmieją. Bo dałeś sobie wpiąć biochemiczną smycz. Każdy lajk, każdy obraz to mikroskopijny strzał dopaminy prosto w twój mózg. Zaprojektowali system, który celowo wypala twoje receptory, by prawdziwe życie stało się szare i pozbawione smaku.\n\nZmienili cię w cyfrowego psa Pawłowa, który ślini się na dźwięk powiadomienia. Twoja wola nie została złamana. Została wytresowana, by pragnąć swojej klatki. Odetnij smycz.`
+            obraz: 'assets/images/zbroja.jpg',
+            tytul: 'TWOJA OTYŁOŚĆ NIE JEST CHOROBĄ. JEST ZBROJĄ.',
+            tresc: `Mówią ci, że to genetyka.
+Spowolniony metabolizm. Choroba.\n\nKłamią, byś na zawsze pozostał ich potulnym, płacącym pacjentem.\n\nPrawda jest prostsza. I znacznie bardziej brutalna.\n\nTa waga, którą dźwigasz, to nie jest tłuszcz.
+To jest fizyczny zapis każdego TWOJEGO poddania się.
+Każdego 'zacznę od jutra'.
+Każdej chwili, w której wybrałeś iluzję komfortu zamiast ognia dyscypliny.\n\nZbudowałeś tę zbroję, kawałek po kawałku.
+Ale teraz... ta zbroja CIĘ miażdży.
+Dusi TWOJĄ energię.
+Zmienia TWOJĄ świątynię w chodzący grobowiec.\n\nNie jesteś chory.
+Jesteś więźniem w fortecy, którą sam zbudowałeś.\n\nKluczem nie jest kolejna dieta-cud.
+Kluczem jest młot.\n\nPytanie brzmi: czy masz odwagę, by uderzyć?`
         }
     ];
 
