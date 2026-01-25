@@ -1,32 +1,41 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>INCEPTORZY</title>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INCEPTORZY :: PROTOKÓŁ PRZEBUDZENIA</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png"> <!-- Sugeruję favicon w formacie PNG -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<section id="przedsionek">
+
+<!-- === PROTOKÓŁ PRZEŁADOWANIA === -->
+<div id="preloader">
+    <img src="assets/images/logo.png" alt="Sztandar Inceptorów w oczekiwaniu...">
+</div>
+
+<!-- === SCENA I: BRAMA WEJŚCIOWA === -->
+<section id="brama-wejsciowa">
+    <div class="spotlight"></div>
     <div id="logo-container">
         <img src="assets/images/logo.png" alt="Sztandar Inceptorów">
     </div>
     <div id="kredo-container">
-        <p>TWOJE CIAŁO TO POLE BITWY. WALCZYMY RAZEM.</p>
-        <br>
-        <p>DEKONSTRUUJEMY KŁAMSTWA. KUJEMY BROŃ. TWORZYMY LEGION.</p>
-        <br>
-        <p>BRAMA ZOSTANIE OTWARTA.</p>
+        <!-- Treść zostanie wygenerowana przez script.js -->
     </div>
-    <div id="scroll-arrow">↓</div>
+    <a href="#arsenal" id="scroll-arrow">↓</a>
 </section>
 
-<section id="zbrojownia">
+<!-- === SCENA II: ARSENAŁ === -->
+<section id="arsenal">
     <h1>ARSENAŁ</h1>
-    <div class="galeria-sygnetow"></div>
+    <div class="galeria-manifestow">
+        <!-- Manifesty zostaną wygenerowane przez script.js -->
+    </div>
 </section>
 
+<!-- === SCENA III: OŁTARZ INICJACJI === -->
 <section id="oltarz">
     <div class="oltarz-text">
         <p>SŁOWA SĄ WIATREM.</p>
@@ -37,25 +46,27 @@
         <br>
         <h2>WEZWIJ ARCHITEKTA.</h2>
     </div>
-    <form action="https://formsubmit.co/twoj.prawdziwy@email.com" method="POST">
+    <form id="wezwanie-form" action="https://formsubmit.co/twoj.prawdziwy@email.com" method="POST">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_next" value="https://inceptorzy.pl/dziekujemy.html">
-        <input type="text" name="imie" placeholder="IMIĘ" required>
-        <input type="email" name="email" placeholder="EMAIL" required>
+        <input type="text" name="imie" placeholder="SYGNAŁ (IMIĘ)" required>
+        <input type="email" name="email" placeholder="WEKTOR (EMAIL)" required>
         <button type="submit">[ ROZPOCZNIJ INCEPCJĘ ]</button>
     </form>
 </section>
 
+<!-- === SCENA IV: KRYPTA === -->
 <footer id="krypta">
-    <p>© 2026 INCEPTORZY. WSZYSTKIE PRAWA ZASTRZEŻONE.</p>
+    <p>© 2026 INCEPTORZY. WSZYSTKIE PRAWA ZASTRZEŻONE. PROTOKÓŁ ZABEZPIECZONY.</p>
 </footer>
 
-<div id="kodeks-modal" class="modal-hidden">
+<!-- === MODAL KODEKSU (UKRYTY HOLOGRAM) === -->
+<div id="kodeks-modal">
     <div id="kodeks-content">
-        <img id="kodeks-image" src="">
+        <img id="kodeks-image" src="" alt="Wizualizacja Manifestu">
         <div id="kodeks-text-container">
             <h2 id="kodeks-title"></h2>
-            <p id="kodeks-text"></p>
+            <div id="kodeks-text"></div>
         </div>
     </div>
     <div id="kodeks-close">X</div>
@@ -64,4 +75,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-```

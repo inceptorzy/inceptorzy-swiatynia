@@ -1,46 +1,247 @@
-{ margin: 0; padding: 0; box-sizing: border-box; }
-body { background-color: #000; color: #fff; font-family: 'Cinzel', serif; text-align: center; }
-section { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 100px 20px; border-bottom: 1px solid #222; }
+/* --- RDZEŃ SYSTEMU I USTAWIENIA GLOBALNE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-#logo-container img { max-width: 200px; margin-bottom: 40px; animation: levitate 8s ease-in-out infinite; }
-#kredo-container { font-size: 1.1em; font-weight: 700; letter-spacing: 1px; line-height: 1.6; }
-#scroll-arrow { margin-top: 40px; font-size: 2em; color: #D4AF37; animation: pulse 2s infinite; }
-@keyframes levitate { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
-@keyframes pulse { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
+html {
+    scroll-behavior: smooth;
+}
 
-#zbrojownia h1 { font-size: 3em; margin-bottom: 50px; }
-.galeria-sygnetow { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; width: 100%; max-width: 1200px; }
-.sygnet { aspect-ratio: 1 / 1; background-size: cover; background-position: center; position: relative; cursor: pointer; overflow: hidden; }
-.sygnet::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 50%); opacity: 0; transition: opacity 0.3s ease; }
-.sygnet:hover::after { opacity: 1; }
-.sygnet h3 { position: absolute; bottom: 20px; left: 20px; right: 20px; font-size: 1.2em; transform: translateY(150%); transition: transform 0.3s ease; }
-.sygnet:hover h3 { transform: translateY(0); }
+body {
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    overflow-x: hidden;
+}
 
-.oltarz-text p { font-size: 1.2em; line-height: 1.8; }
-.oltarz-text h2 { font-size: 2.5em; margin: 40px 0; }
-#wezwanie-form input { background: transparent; border: 1px solid #555; color: #fff; font-family: 'Cinzel', serif; font-size: 1em; padding: 15px; margin: 5px; width: 280px; text-align: center; transition: border-color 0.3s; }
-#wezwanie-form input:focus { outline: none; border-color: #D4AF37; }
-#wezwanie-form button { background: transparent; border: 2px solid #D4AF37; color: #D4AF37; font-family: 'Cinzel', serif; font-size: 1.2em; font-weight: 700; padding: 13px 30px; cursor: pointer; margin-top: 20px; transition: all 0.3s; }
-#wezwanie-form button:hover { background-color: #D4AF37; color: #000; transform: scale(1.05); }
+/* --- PROTOKÓŁ PRZEŁADOWANIA --- */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+#preloader img {
+    width: 150px;
+    animation: pulse 2s infinite;
+}
+body.loaded #preloader {
+    opacity: 0;
+    visibility: hidden;
+}
 
-footer { padding: 40px; font-size: 0.8em; color: #444; }
 
-#kodeks-modal { position: fixed; top: 0; left: 0; z-index: 1000; width: 100%; height: 100%; background-color: rgba(0,0,0,0.95); display: flex; justify-content: center; align-items: center; visibility: hidden; opacity: 0; transition: opacity 0.4s ease, visibility 0s linear 0.4s; }
-#kodeks-modal.modal-visible { visibility: visible; opacity: 1; transition: opacity 0.4s ease; }
-#kodeks-content { display: flex; width: 80%; height: 80%; max-width: 1400px; }
-#kodeks-image { width: 50%; height: 100%; object-fit: contain; }
-#kodeks-text-container { width: 50%; height: 100%; padding: 40px; overflow-y: auto; text-align: left; }
-#kodeks-text-container h2 { font-size: 2em; margin-bottom: 20px; color: #D4AF37; }
-#kodeks-text-container p { font-family: sans-serif; line-height: 1.7; font-size: 1.1em; color: #ccc; }
-#kodeks-close { position: absolute; top: 30px; right: 30px; font-size: 2em; cursor: pointer; color: #555; transition: color 0.3s; }
-#kodeks-close:hover { color: #fff; }
+/* --- SEKCJE GŁÓWNE --- */
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px;
+    position: relative;
+    border-bottom: 1px solid #1a1a1a;
+}
 
+/* --- SCENA I: BRAMA WEJŚCIOWA --- */
+#brama-wejsciowa {
+    overflow: hidden;
+}
+.spotlight {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, rgba(0,0,0,0) 30%);
+    pointer-events: none;
+    transition: transform 0.1s ease-out;
+}
+#logo-container img {
+    max-width: 200px;
+    margin-bottom: 40px;
+    animation: levitate 8s ease-in-out infinite;
+}
+#kredo-container {
+    font-size: 1.2em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.8;
+    min-height: 200px; /* Zapewnia miejsce dla tekstu */
+}
+.kredo-line .cursor {
+    display: inline-block;
+    background-color: #D4AF37;
+    margin-left: 5px;
+    width: 10px;
+    animation: blink 1s step-end infinite;
+}
+#scroll-arrow {
+    position: absolute;
+    bottom: 30px;
+    font-size: 2em;
+    color: #D4AF37;
+    text-decoration: none;
+    animation: pulse 2.5s infinite;
+    opacity: 0;
+}
+
+/* --- SCENA II: ARSENAŁ --- */
+#arsenal h1 {
+    font-size: 3.5em;
+    margin-bottom: 60px;
+    color: #D4AF37;
+}
+.galeria-manifestow {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 1300px;
+}
+.manifest {
+    aspect-ratio: 1 / 1;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid #222;
+    transition: border-color 0.4s ease, transform 0.4s ease;
+}
+.manifest:hover {
+    border-color: #D4AF37;
+    transform: scale(1.03);
+}
+.manifest::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.1) 60%);
+    opacity: 0.8;
+    transition: opacity 0.4s ease;
+}
+.manifest:hover::after {
+    opacity: 1;
+}
+.manifest h3 {
+    position: absolute;
+    bottom: 25px; left: 25px; right: 25px;
+    font-size: 1.3em;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+    z-index: 2;
+}
+.manifest:hover h3 {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* --- SCENA III: OŁTARZ INICJACJI --- */
+#oltarz { background: #050505; }
+.oltarz-text p { font-size: 1.3em; line-height: 1.8; color: #aaa; }
+.oltarz-text h2 { font-size: 2.8em; margin: 40px 0; color: #D4AF37; }
+#wezwanie-form input, #wezwanie-form button {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1em;
+    text-align: center;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+#wezwanie-form input {
+    border: 1px solid #555;
+    color: #FFFFFF;
+    padding: 15px;
+    margin: 8px;
+    width: 300px;
+}
+#wezwanie-form input:focus {
+    outline: none;
+    border-color: #D4AF37;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}
+#wezwanie-form button {
+    border: 2px solid #D4AF37;
+    color: #D4AF37;
+    font-weight: 700;
+    padding: 14px 35px;
+    cursor: pointer;
+    margin-top: 25px;
+}
+#wezwanie-form button:hover {
+    background-color: #D4AF37;
+    color: #000000;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+}
+
+/* --- SCENA IV: KRYPTA --- */
+#krypta { min-height: auto; padding: 40px; font-size: 0.9em; color: #444; border: none; }
+
+/* --- MODAL KODEKSU --- */
+#kodeks-modal {
+    position: fixed; top: 0; left: 0; z-index: 1000;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.97);
+    display: flex; justify-content: center; align-items: center;
+    opacity: 0; visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0s 0.4s;
+}
+#kodeks-modal.modal-visible { opacity: 1; visibility: visible; transition-delay: 0s; }
+#kodeks-content {
+    display: flex; width: 85%; height: 85%; max-width: 1500px;
+    transform: scale(0.95); opacity: 0;
+    transition: transform 0.4s ease 0.1s, opacity 0.4s ease 0.1s;
+}
+#kodeks-modal.modal-visible #kodeks-content { transform: scale(1); opacity: 1; }
+#kodeks-image { width: 50%; height: 100%; object-fit: cover; }
+#kodeks-text-container {
+    width: 50%; height: 100%; padding: 40px; overflow-y: auto; text-align: left;
+}
+#kodeks-text-container h2 { font-size: 2.2em; margin-bottom: 25px; color: #D4AF37; }
+#kodeks-text {
+    font-family: 'Helvetica Neue', sans-serif; /* Lepsza czytelność dłuższych tekstów */
+    line-height: 1.8; font-size: 1.1em; color: #ccc; white-space: pre-wrap;
+}
+#kodeks-close {
+    position: absolute; top: 30px; right: 30px; font-size: 2em;
+    cursor: pointer; color: #555; transition: color 0.3s, transform 0.3s;
+}
+#kodeks-close:hover { color: #fff; transform: rotate(90deg); }
+
+/* --- Pasek Przewijania & Animacje --- */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #000; }
+::-webkit-scrollbar-thumb { background: #222; }
+::-webkit-scrollbar-thumb:hover { background: #D4AF37; }
+
+@keyframes levitate { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+@keyframes pulse { 0%, 100% { opacity: 0.4; transform: scale(1); } 50% { opacity: 1; transform: scale(1.05); } }
+@keyframes blink { 50% { opacity: 0; } }
+
+/* --- PROTOKÓŁ PŁYNNEJ MOCY (RESPONSYWNOŚĆ) --- */
 @media (max-width: 992px) {
-#kodeks-content { flex-direction: column; width: 90%; height: 90%; }
-#kodeks-image { width: 100%; height: 40%; }
-#kodeks-text-container { width: 100%; height: 60%; padding: 20px; }
+    #kodeks-content { flex-direction: column; width: 90%; height: 90%; }
+    #kodeks-image { width: 100%; height: 40%; }
+    #kodeks-text-container { width: 100%; height: 60%; padding: 25px; }
 }
 @media (max-width: 600px) {
-section { padding: 50px 15px; }
-.galeria-sygnetow { grid-template-columns: 1fr; }
-}```
+    section { padding: 60px 15px; }
+    #logo-container img { max-width: 150px; }
+    #kredo-container { font-size: 1em; }
+    #arsenal h1 { font-size: 2.5em; }
+    .galeria-manifestow { grid-template-columns: 1fr; }
+    .oltarz-text h2 { font-size: 2em; }
+    #wezwanie-form input { width: 100%; }
+}

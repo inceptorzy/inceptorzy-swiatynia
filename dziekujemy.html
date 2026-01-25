@@ -6,17 +6,48 @@
     <title>WEZWANIE ODEBRANE</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #000; color: #fff; font-family: 'Cinzel', serif; display: flex; justify-content: center; align-items: center; height: 100vh; text-align: center; }
-        .container { max-width: 800px; }
-        h1 { font-size: 3em; color: #D4AF37; margin-bottom: 20px; }
-        p { font-size: 1.5em; line-height: 1.6; }
+        body {
+            background-color: #000;
+            color: #ccc;
+            font-family: 'Cinzel', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+        .container { max-width: 800px; padding: 20px; }
+        h1 {
+            font-size: 2.5em;
+            color: #D4AF37;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+        p {
+            font-size: 1.3em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .oczekuj {
+            font-size: 1.8em;
+            color: #fff;
+            font-weight: 700;
+            letter-spacing: 5px;
+            margin-top: 40px;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>WEZWANIE ZOSTAŁO ODEBRANE.</h1>
-        <p>Twoje dane są analizowane. Jeśli zostaniesz uznany za godnego, Architekt skontaktuje się z Tobą w ciągu 48 godzin.</p>
-        <p>Oczekuj.</p>
+        <h1>TRANSMISJA ODEBRANA. PROTOKÓŁ ZAINICJOWANY.</h1>
+        <p>Twój sygnał został zarejestrowany w systemie. Przechodzi teraz weryfikację. Architekt analizuje wektor twojego zgłoszenia.</p>
+        <p>Jeśli zostaniesz uznany za kompatybilnego z misją, otrzymasz dyrektywę w ciągu 48 godzin. Nie szukaj nas. Czekaj na sygnał.</p>
+        <p class="oczekuj">OCZEKUJ.</p>
     </div>
 </body>
 </html>
