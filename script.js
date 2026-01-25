@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ];
         
         let totalDelay = 500; // Opóźnienie przed startem pisania
-        
+        setTimeout(() => { kredoContainer.style.opacity = 1; }, totalDelay - 250); // <<< DODAJ TĘ LINIĘ
         kredoLines.forEach((line, index) => {
             const p = document.createElement('p');
             p.className = 'kredo-line';

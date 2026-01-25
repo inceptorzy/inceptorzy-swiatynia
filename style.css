@@ -76,6 +76,8 @@ section {
     letter-spacing: 2px;
     line-height: 1.8;
     min-height: 200px; /* Zapewnia miejsce dla tekstu */
+opacity: 0; /* <<< DODAJ TĘ LINIĘ */
+    transition: opacity 1s ease-in-out; /* <<< DODAJ TĘ LINIĘ */
 }
 .kredo-line .cursor {
     display: inline-block;
