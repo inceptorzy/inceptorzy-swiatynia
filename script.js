@@ -2,26 +2,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- ARSENAŁ: BAZA DANYCH MANIFESTÓW ---
     const arsenalData = [
-        {
-            obraz: 'assets/images/sila-woli.PNG',
+         {
+            obraz: 'assets/images/sila-woli.png',
             tytul: 'TWOJA SIŁA WOLI NIE ISTNIEJE.',
-            tresc: `Mówią CI:
-\n\n
-'Weź się w garść.'
+            tresc: `Mówią CI:\n\n'Weź się w garść.'
 'Miej więcej dyscypliny.'
-'Wszystko jest w twojej głowie.'
-\n\n
-Kłamią.
-\n\n
-Próbujesz kontrolować biochemiczny sztorm za pomocą myśli.
-To jak próba zatrzymania huraganu krzykiem.
-\n\n
-Twoje ciało nie słucha TWOJEJ woli, bo jest zaprogramowane przez wroga:
-Cukier. Stan zapalny. Bezruch.
-\n\n
-Chcesz odzyskać kontrolę?
-\n\n
-Przestań walczyć ze SOBĄ.
+'Wszystko jest w twojej głowie.'.\n\nKłamią.\n\nPróbujesz kontrolować biochemiczny sztorm za pomocą myśli.
+To jak próba zatrzymania huraganu krzykiem.\n\nTwoje ciało nie słucha TWOJEJ woli, bo jest zaprogramowane przez wroga:
+Cukier. Stan zapalny. Bezruch.\n\nChcesz odzyskać kontrolę?\n\nPrzestań walczyć ze SOBĄ.
 Zacznij walczyć z wrogiem, którego wpuściłeś do świątyni.`
         },
         {
