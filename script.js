@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- ARSENAŁ: BAZA DANYCH MANIFESTÓW ---
+    // --- GALERIA PRAWDY: BAZA DANYCH MANIFESTÓW ---
     const arsenalData = [
          {
             obraz: 'assets/images/sila-woli.png',
