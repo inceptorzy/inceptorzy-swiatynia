@@ -13,9 +13,16 @@ Cukier. Stan zapalny. Bezruch.\n\nChcesz odzyskać kontrolę?\n\nPrzestań walcz
 Zacznij walczyć z wrogiem, którego wpuściłeś do świątyni.`
         },
         {
-            obraz: 'assets/images/plynny-zlodziej.png',
-            tytul: 'Nie pijesz alkoholu. To on pije CIEBIE.',
-            tresc: `Mówią: 'relaks', 'nagroda', 'tradycja'. Podają ci złoty płyn w kieliszku i mówią, że to symbol siły i wolności. A ty w to wierzysz.\n\nObudź się. Ten płyn to kastracja. To fitoestrogenowy rozpuszczalnik, który kawałek po kawałku kradnie twoją męskość, twoją energię, twoją wolę. Każdy łyk to transakcja, w której oddajesz cząstkę swojej duszy za iluzję chwilowej ulgi.\n\nOn nie sprzedaje ci relaksu. On sprzedaje tobie CIEBIE. Korporacyjnym bogom, którzy płacą mu za twoje zniewolenie. Następnym razem, gdy na niego spojrzysz, zobacz w nim złodzieja, który przyszedł okraść twoją świątynię.`
+            obraz: 'assets/images/pasozyt.png',
+            tytul: 'NIE JESTEŚ UZALEŻNIONY OD JEDZENIA. JESTEŚ ŻYWICIELEM PASOŻYTA, KTÓREGO SAM HODUJESZ.',
+            tresc: `Myślisz, że to 'TY' chcesz tego ciastka.
+Myślisz, że to 'TWOJA' ochota na chipsy.\n\nTo iluzja.\n\nW TOBIE, w mrocznych, wilgotnych katakumbach twojego ciała, żyje pasożyt.
+Stworzyłeś go z cukru, ultraprzetworzonego jedzenia i chemii.
+Wykarmiłeś go swoją słabością.
+Uczyniłeś go panem SWOJEGO wewnętrznego królestwa.\n\nA teraz... to on rządzi.\n\nTo nie jest głód. To jest jego żądanie.
+To nie jest zachcianka. To jest jego rozkaz.\n\nGdy czujesz ten nieodparty impuls, by sięgnąć po truciznę, to nie jesteś TY. To jest pasożyt, który domaga się pożywienia. A TY jesteś jego żywicielem.\n\nI TY, posłuszny, idziesz i go karmisz. Z każdym kęsem, on rośnie w siłę, a TY stajesz się słabszy, bardziej zmęczony, bardziej zamglony.\n\nTo jest idealny cykl niewolnictwa.\n\nChcesz się wyzwolić?\n\nMusisz przestać z nim negocjować.
+Musisz go zagłodzić.
+Musisz przetrwać jego agonalne spazmy, gdy będzie umierał w TWOIM wnętrzu.\n\nBo tylko wtedy, gdy on zginie, TY wreszcie odzyskasz SWOJĄ świątynię.`
         },
         {
             obraz: 'assets/images/dopaminowa-smycz.jpg', // Zaktualizowana nazwa pliku
