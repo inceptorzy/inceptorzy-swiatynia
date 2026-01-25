@@ -6,26 +6,26 @@ document.addEventListener('DOMContentLoaded', () => {
             obraz: 'assets/images/sila-woli.PNG',
             tytul: 'TWOJA SIŁA WOLI NIE ISTNIEJE.',
             tresc: `Mówią CI:
-
+\n\n
 'Weź się w garść.'
 'Miej więcej dyscypliny.'
 'Wszystko jest w twojej głowie.'
-
+\n\n
 Kłamią.
-
+\n\n
 Próbujesz kontrolować biochemiczny sztorm za pomocą myśli.
 To jak próba zatrzymania huraganu krzykiem.
-
+\n\n
 Twoje ciało nie słucha TWOJEJ woli, bo jest zaprogramowane przez wroga:
 Cukier. Stan zapalny. Bezruch.
-
+\n\n
 Chcesz odzyskać kontrolę?
-
+\n\n
 Przestań walczyć ze SOBĄ.
 Zacznij walczyć z wrogiem, którego wpuściłeś do świątyni.`
         },
         {
-            obraz: 'assets/images/plynny-zlodziej.jpg',
+            obraz: 'assets/images/plynny-zlodziej.png',
             tytul: 'Nie pijesz alkoholu. To on pije CIEBIE.',
             tresc: `Mówią: 'relaks', 'nagroda', 'tradycja'. Podają ci złoty płyn w kieliszku i mówią, że to symbol siły i wolności. A ty w to wierzysz.\n\nObudź się. Ten płyn to kastracja. To fitoestrogenowy rozpuszczalnik, który kawałek po kawałku kradnie twoją męskość, twoją energię, twoją wolę. Każdy łyk to transakcja, w której oddajesz cząstkę swojej duszy za iluzję chwilowej ulgi.\n\nOn nie sprzedaje ci relaksu. On sprzedaje tobie CIEBIE. Korporacyjnym bogom, którzy płacą mu za twoje zniewolenie. Następnym razem, gdy na niego spojrzysz, zobacz w nim złodzieja, który przyszedł okraść twoją świątynię.`
         },
