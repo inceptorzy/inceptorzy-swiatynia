@@ -3,9 +3,26 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- ARSENAŁ: BAZA DANYCH MANIFESTÓW ---
     const arsenalData = [
         {
-            obraz: 'assets/images/zbroja-wstydu.jpg',
-            tytul: 'Twoja otyłość nie jest chorobą. Jest zbroją.',
-            tresc: `Nazywają to chorobą. Dają ci numer w statystykach i litościwe spojrzenia. KŁAMIĄ.\n\nTwoje ciało nie jest zepsute. Ono jest w stanie wojny. Zbudowało fortecę z tłuszczu, by obronić cię przed toksycznym zalewem, którym karmisz je każdego dnia. To jest zbroja. Ciężka, niewygodna, ale to zbroja, która chroni twoje narządy wewnętrzne przed ostatecznym upadkiem.\n\nPrzestań nienawidzić tej zbroi. Zrozum, dlaczego powstała. Odetnij dostawy trucizny dla wroga, a twoje ciało samo zacznie ją demontować, kawałek po kawałku, odzyskując utracone terytorium.`
+            obraz: 'assets/images/sila-woli.PNG',
+            tytul: 'TWOJA SIŁA WOLI NIE ISTNIEJE.',
+            tresc: `Mówią CI:
+
+'Weź się w garść.'
+'Miej więcej dyscypliny.'
+'Wszystko jest w twojej głowie.'
+
+Kłamią.
+
+Próbujesz kontrolować biochemiczny sztorm za pomocą myśli.
+To jak próba zatrzymania huraganu krzykiem.
+
+Twoje ciało nie słucha TWOJEJ woli, bo jest zaprogramowane przez wroga:
+Cukier. Stan zapalny. Bezruch.
+
+Chcesz odzyskać kontrolę?
+
+Przestań walczyć ze SOBĄ.
+Zacznij walczyć z wrogiem, którego wpuściłeś do świątyni.`
         },
         {
             obraz: 'assets/images/plynny-zlodziej.jpg',
@@ -51,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const kredoLines = [
             "TWOJE CIAŁO TO POLE BITWY. WALCZYMY RAZEM.",
             "DEKONSTRUUJEMY KŁAMSTWA. KUJEMY BROŃ. TWORZYMY LEGION.",
-            "BRAMA ZOSTANIE OTWARTA."
+            "BRAMA ZOSTAŁA OTWARTA."
         ];
         
         let totalDelay = 500; // Opóźnienie przed startem pisania
