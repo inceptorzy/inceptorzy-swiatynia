@@ -25,7 +25,7 @@ Musisz go zagłodzić.
 Musisz przetrwać jego agonalne spazmy, gdy będzie umierał w TWOIM wnętrzu.\n\nBo tylko wtedy, gdy on zginie, TY wreszcie odzyskasz SWOJĄ świątynię.`
         },
         {
-            obraz: 'assets/images/zbroja.jpg',
+            obraz: 'assets/images/zbroja.png',
             tytul: 'TWOJA OTYŁOŚĆ NIE JEST CHOROBĄ. JEST ZBROJĄ.',
             tresc: `Mówią ci, że to genetyka.
 Spowolniony metabolizm. Choroba.\n\nKłamią, byś na zawsze pozostał ich potulnym, płacącym pacjentem.\n\nPrawda jest prostsza. I znacznie bardziej brutalna.\n\nTa waga, którą dźwigasz, to nie jest tłuszcz.
